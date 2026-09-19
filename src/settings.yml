@@ -4,7 +4,7 @@ no_screen_padding: 'no'
 dark_mode: 'no'
 static_data: ''
 polling_verb: get
-framework_version: latest
+framework_version: 3.3.2
 serverless_language: node
 polling_url: https://api.joulo.nl/functions/v1/api/energy
 polling_headers: authorization=Bearer {{ api_key }}
