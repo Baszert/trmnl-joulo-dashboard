@@ -1,0 +1,26 @@
+{% assign chart_id = "joulo-" | append_random %}
+
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+
+{% template dataPoint %}
+<div class="flex gap--medium flex--end">
+  <div class="value--small mb--4 lg:mb--10">
+    <i class="hgi hgi-stroke {{ icon }}"></i>
+  </div>
+  <div class="mt--1">
+    <div class="value--xxsmall lg:value--xsmall text--gray-30">
+      {{ title }}
+    </div>
+    <div class="value--xsmall lg:value mt--1 bold">
+      {% if money_prefix %}
+        {{ money_prefix }}{% render "formatMoney", value: value %}{{ money_suffix }}
+      {% else %}
+        {{ value | round: 2 }}
+      {% endif %}
+      {% if unit %}
+      <strong class="label--small text--gray-40">{{ unit }}</strong>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endtemplate %}
