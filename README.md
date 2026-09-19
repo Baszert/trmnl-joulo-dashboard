@@ -1,9 +1,18 @@
-# Joulo 
+# Joulo – ERE certificaten
 
-A [TRMNL](https://trmnl.com) plugin for ePaper displays, connected by
-[GitHub Sync](https://help.trmnl.com/en/articles/15977899-github-sync): every save in TRMNL lands here as a commit.
+**Netherlands only.** Insight into the ERE certificates you build up by charging your car at home, with [Joulo](https://joulo.nl) as your intermediary.
 
-<img width="150" alt="image" src="https://trmnl.com/images/brand/badges/light/works-with-trmnl/trmnl-badge-works-with-light.svg" />
+<a href="https://trmnl.com/recipes/367355"><img width="150" alt="Works with TRMNL" src="https://trmnl.com/images/brand/badges/light/works-with-trmnl/trmnl-badge-works-with-light.svg" /></a>
+
+## Features
+- kWh charged and ERE credits per month this year, as a chart
+- Year-to-date totals and estimated value in euros
+- Current ERE market price (week number included)
+
+## Settings
+- **API key:** Joulo dashboard → Settings → Developer → API
+
+Data from the Joulo API; a serverless `transform.js` adds the public ERE price feed and prepares the chart data.
 
 ### Develop locally
 
@@ -14,6 +23,4 @@ gem install trmnl_preview
 trmnlp serve
 ```
 
-### Discoverability
-
-Add the `trmnl` topic to this repo so other TRMNL plugin builders can find it.
+Questions or ideas? trmnl@achtnegen.nl or @Bastronautica on Discord.
